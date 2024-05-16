@@ -39,7 +39,7 @@ PERSON_NAME = get_person_name()
 st.header(f"Congrats, {PERSON_NAME}! 😁 ", anchor=False)
 
 #display Lottie animation
-lottie_animation = load_lottie_animation(LOTTIE_ANIMATION)
+lottie_animation = load_lot_animation(LOTTIE_ANIMATION)
 st_lottie(lottie_animation, key="lottie-holiday", height=300)
 
 #personalizzed message
