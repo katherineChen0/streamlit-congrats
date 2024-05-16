@@ -7,8 +7,8 @@ from streamlit_extras.let_it_rain import rain
 #Directories and file paths
 THIS_DIR = Path(__file__).parent
 CSS_FILE = THIS_DIR / "style" / "style.css"
-ASSETTS = THIS_DIR / "assets"
-LOTTIE_ANIMATION = ASSETTS / "animation_holiday.json"
+ASSETS = THIS_DIR / "assets"
+LOTTIE_ANIMATION = ASSETS / "animation_holiday.json"
 
 #function to load and display the Lottie animation
 def load_lot_animation(file_path):
@@ -42,7 +42,7 @@ st.header(f"Congrats, {PERSON_NAME}! 😁 ", anchor=False)
 lottie_animation = load_lot_animation(LOTTIE_ANIMATION)
 st_lottie(lottie_animation, key="lottie-holiday", height=300)
 
-#personalizzed message
+#personalized message
 st.markdown(
     f"Dear {PERSON_NAME}, i am so proud of you for getting through another year. "
 )
