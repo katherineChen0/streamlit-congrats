@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import json
 import streamlit as st
@@ -5,7 +6,15 @@ from streamlit_lottie import st_lottie
 from streamlit_extras.let_it_rain import rain
 
 #Directories and file paths
-THIS_DIR = Path(__file__).parent
+# Get the absolute path of the current Python file
+current_file_path = os.path.realpath(__file__)
+
+# Get the directory containing the current file
+app_dir = os.path.dirname(current_file_path)
+
+# Set APP_DIR environment variable to the directory containing the current file
+os.environ['APP_DIR'] = app_dir
+THIS_DIR = Path(os.getenv('APP_DIR', __file__)).parent
 CSS_FILE = THIS_DIR / "style" / "style.css"
 ASSETS = THIS_DIR / "assets"
 LOTTIE_ANIMATION = ASSETS / "animation_holiday.json"
